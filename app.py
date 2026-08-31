@@ -25,6 +25,15 @@ def horarios():
     ]
     return jsonify(horarios)
 
+@app.route("/filmes-em-lancamento", methods=["GET"])
+def filmes_em_lancamento():
+    lancamentos = [
+        {"id": 1, "titulo": "Missao Impossivel: Novo Horizonte", "genero": "Acao", "data_estreia": "15/09/2026"},
+        {"id": 2, "titulo": "O Reino Perdido", "genero": "Aventura", "data_estreia": "22/09/2026"},
+        {"id": 3, "titulo": "Sombras do Amanha", "genero": "Suspense", "data_estreia": "03/10/2026"},
+    ]
+    return jsonify(lancamentos)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
