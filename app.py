@@ -46,6 +46,7 @@ def cardapio():
     ]
     return jsonify(itens)
 
+
 @app.route("/salas", methods=["GET"])
 def salas():
     salas = [
@@ -56,6 +57,15 @@ def salas():
     ]
 
     return jsonify(salas)
+
+@app.route("/promocoes", methods=["GET"])
+def promocoes():
+    promocoes = [
+        {"titulo": "Segunda em Dobro", "descricao": "Compre um ingresso e ganhe outro na segunda-feira"},
+        {"titulo": "Meia-entrada Estudante", "descricao": "50% de desconto para estudantes com carteirinha"},
+        {"titulo": "Combo Família", "descricao": "4 ingressos + pipoca grande + 4 refrigerantes com desconto"},
+        ]
+    return jsonify(promocoes)
 
 if __name__ == '__main__':
     app.run(debug=True)
