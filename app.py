@@ -46,6 +46,18 @@ def cardapio():
     ]
     return jsonify(itens)
 
+
+@app.route("/salas", methods=["GET"])
+def salas():
+    salas = [
+        {"numero": 1, "tipo": "Padrão", "capacidade": 120},
+        {"numero": 2, "tipo": "3D", "capacidade": 90},
+        {"numero": 3, "tipo": "VIP", "capacidade": 40},
+        {"numero": 4, "tipo": "IMAX", "capacidade": 150},
+    ]
+
+    return jsonify(salas)
+
 @app.route("/promocoes", methods=["GET"])
 def promocoes():
     promocoes = [
