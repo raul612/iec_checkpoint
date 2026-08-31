@@ -46,5 +46,14 @@ def cardapio():
     ]
     return jsonify(itens)
 
+@app.route("/avaliacoes", methods=["GET"])
+def avaliacoes():
+    avaliacoes = [
+        {"filme": "Guerra nas Estrelas: Nova Jornada", "nota": 4.5, "total_avaliacoes": 1230},
+        {"filme": "Comédia da Vida", "nota": 3.8, "total_avaliacoes": 540},
+        {"filme": "Terror na Noite", "nota": 4.1, "total_avaliacoes": 890},
+    ]
+    return jsonify(avaliacoes)
+
 if __name__ == '__main__':
     app.run(debug=True)
