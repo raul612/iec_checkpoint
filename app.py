@@ -34,6 +34,17 @@ def filmes_em_lancamento():
     ]
     return jsonify(lancamentos)
 
+@app.route("/cardapio", methods=["GET"])
+def cardapio():
+    itens = [
+        {"item": "Pipoca Pequena", "preco": 12.00},
+        {"item": "Pipoca Media", "preco": 18.00},
+        {"item": "Pipoca Grande", "preco": 24.00},
+        {"item": "Refrigerante 500ml", "preco": 9.00},
+        {"item": "Combo Casal", "preco": 38.00},
+        {"item": "Nachos com Cheddar", "preco": 16.00},
+    ]
+    return jsonify(itens)
 
 if __name__ == '__main__':
     app.run(debug=True)
